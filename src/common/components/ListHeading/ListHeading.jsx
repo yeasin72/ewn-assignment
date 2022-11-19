@@ -1,10 +1,10 @@
-import React from 'react'
-import Styled from 'styled-components'
-import CheckboxWithtext from '../CheckboxWithtext/CheckboxWithtext'
-import ToggleText from '../ToggleText/ToggleText'
-import { useDispatch, useSelector } from 'react-redux';
-import { addAllItems, removeItem } from '../../../store/features/selectItems';
-import { sortByCalories, sortByFats, sortByName, sortByCarbsData, sortByProteinData } from '../../../store/features/nurtirionManagement';
+import React from "react"
+import Styled from "styled-components"
+import CheckboxWithtext from "../CheckboxWithtext/CheckboxWithtext"
+import ToggleText from "../ToggleText/ToggleText"
+import { useDispatch, useSelector } from "react-redux";
+import { addAllItems, removeItem } from "../../../store/features/selectItems";
+import { sortByCalories, sortByFats, sortByName, sortByCarbsData, sortByProteinData } from "../../../store/features/nurtirionManagement";
 
 /** List heading Style */
 const ListHeader = Styled.div`
@@ -71,7 +71,8 @@ export default function ListHeading() {
     
 
     return (
-        <ListHeader>
+        <ListHeader
+            role="listheading">
             <CheckboxWithtext
                 onClick={() => sortingAllItems("Name")} 
                 isClicked={selected.length === allnutritions.length && selected.length > 0} 

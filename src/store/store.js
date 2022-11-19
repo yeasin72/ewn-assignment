@@ -1,7 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit"
 //import reducer
-import NutritionManagement from './features/nurtirionManagement'
-import SelectedItems from './features/selectItems'
+import NutritionManagement from "./features/nurtirionManagement"
+import SelectedItems from "./features/selectItems"
 
 
 // combine all reducer

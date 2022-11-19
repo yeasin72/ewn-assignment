@@ -1,8 +1,12 @@
-import {render as rtlRender, screen, cleanup} from "@testing-library/react";
+import {
+    render as rtlRender, 
+    screen, 
+    cleanup
+} from "@testing-library/react";
 import SingleNutrition from "../../common/components/SingleNutrition/SingleNutrition";
 import Store from "../../store/store";
 import { Provider } from "react-redux";
-import "jest-styled-components";
+import "jest-styled-components"; 
 
 const componentRender = component => rtlRender(
     <Provider store={Store}>{component}</Provider>
@@ -34,7 +38,7 @@ describe("Single nutrition component test",  () => {
     })
     
     /** Major Style check */
-    it("Style in the document", () => {
+    it("Style in the document",  () => {
         componentRender(<SingleNutrition nutrition={nutrition} />)
         const element = screen.getByRole("nutrition")
         expect(element).toHaveStyle(`width: 100%;

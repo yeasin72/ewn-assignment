@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import Styled from 'styled-components'
-import ListContainer from '../../../common/components/ListContainer/ListContainer'
-import ListFooter from '../../../common/components/ListFooter/ListFooter'
-import ListHeading from '../../../common/components/ListHeading/ListHeading'
-import NutritionList from '../../../common/components/NutritionList/NutritionList'
-import { getAllNutritions } from '../../../store/features/nurtirionManagement'
+import { useSelector } from "react-redux"
+import Styled from "styled-components"
+import ListContainer from "../../../common/components/ListContainer/ListContainer"
+import ListFooter from "../../../common/components/ListFooter/ListFooter"
+import ListHeading from "../../../common/components/ListHeading/ListHeading"
+import NutritionList from "../../../common/components/NutritionList/NutritionList"
+
 
 // Nutrition Section style.
 const NutritionSection = Styled.section`
@@ -18,18 +17,13 @@ const NutritionSection = Styled.section`
     flex-direction: column;
 `
 export default function NutritionComponent() {
-    const dispatch = useDispatch();
     const { nutritions } = useSelector(state => state)
     const { allnutritions } = nutritions
     
-    /** Effect  */
-    useEffect(() => {
-        dispatch(getAllNutritions())
-    }, [dispatch])
-
 
     return (
-        <NutritionSection>
+        <NutritionSection
+            role="nutritionpage">
             <ListContainer>
                 <ListHeading />
                 <NutritionList nutritions={allnutritions} />

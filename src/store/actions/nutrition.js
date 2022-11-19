@@ -1,5 +1,9 @@
-import { jsonToString, STORAGE_KEY, stringToJson } from "../../utils/nutrition";
-import Data from '../data/data.json'
+import { 
+    jsonToString,
+    STORAGE_KEY, 
+    stringToJson 
+} from "../../utils/nutrition.utils";
+import Data from "../data/data.json"
 
 
 /**

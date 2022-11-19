@@ -1,4 +1,8 @@
-import {render as rtlRender, screen, cleanup} from "@testing-library/react"
+import {
+    render as rtlRender, 
+    screen, 
+    cleanup
+} from "@testing-library/react"
 import NutritionList from "../../common/components/NutritionList/NutritionList";
 import Data from "../../store/data/data.json";
 import Store from "../../store/store"

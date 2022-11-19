@@ -1,5 +1,5 @@
-import React from 'react'
-import Header from '../../common/components/Header/Header'
+import React from "react"
+import Header from "../../common/components/Header/Header"
 
 /**
  * Layout with only Header.

@@ -1,9 +1,9 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import Styled from 'styled-components'
-import { MdDelete } from 'react-icons/md';
-import { delNutritions } from '../../../store/features/nurtirionManagement';
-import { addAllItems } from '../../../store/features/selectItems';
+import React from "react"
+import { useDispatch, useSelector } from "react-redux";
+import Styled from "styled-components"
+import { MdDelete } from "react-icons/md";
+import { delNutritions } from "../../../store/features/nurtirionManagement";
+import { addAllItems } from "../../../store/features/selectItems";
 
 // Header section style.
 const HeaderSection = Styled.section`
@@ -52,9 +52,11 @@ export default function Header() {
     }
 
     return (
-        <HeaderSection>
+        <HeaderSection
+            role="header">
             <div>
-                <HeadingText>
+                <HeadingText
+                    role="headingtext">
                     Nutrition
                 </HeadingText>
             </div>

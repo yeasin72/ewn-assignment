@@ -1,5 +1,5 @@
-import './assets/style/app.css'
-import Nutrition from './pages/Nutrition/Nutrition';
+import "./assets/style/app.css"
+import Nutrition from "./pages/Nutrition/Nutrition";
 
 /**
  * Application.
