@@ -1,12 +1,23 @@
-import { geneRateNutritionId, jsonToString, STORAGE_KEY, stringToJson } from "../../utils/nutrition";
+import { jsonToString, STORAGE_KEY, stringToJson } from "../../utils/nutrition";
 import Data from '../data/data.json'
+
+
+/**
+ * Get data form local storage.
+ * @returns {object[]} nutrition.
+ */
+function getDataFromLocalStorage() {
+    const strData = localStorage.getItem(STORAGE_KEY)
+    const nutrition = stringToJson(strData)
+    return nutrition
+}
+
 
 /**
  * Get Nutrition.
  * @returns {object[]} state
  */
-export function geNutritions() {
-    console.log("working");
+export function geNutritions(start, end) {
     const strData = localStorage.getItem(STORAGE_KEY)
     // if storage is empty.
     if (!strData) {
@@ -14,7 +25,7 @@ export function geNutritions() {
         return Data
     }
     const nutrition = stringToJson(strData)
-    return nutrition
+    return { element: nutrition.slice(start, end), length: nutrition.length}
 }
 
 /**
@@ -23,8 +34,7 @@ export function geNutritions() {
  * @returns {object[]}
  */
 export function deleteNutrition(itemIds) {
-    const strData = localStorage.getItem(STORAGE_KEY)
-    const nutrition = stringToJson(strData)
+    const nutrition = getDataFromLocalStorage()
     const updatedNutrition = nutrition.filter(ele => !itemIds.includes(ele.id))
     // after delete update storage data.
     localStorage.setItem(STORAGE_KEY, jsonToString(updatedNutrition))
@@ -36,18 +46,21 @@ export function deleteNutrition(itemIds) {
  * @param {object} nutrition
  * @returns {object[]} state
  */
-export function addNutrition({name, calories, fat, carbs, protein}) {
-    const strData = localStorage.getItem(STORAGE_KEY)
-    const nutrition = stringToJson(strData)
-    const id = geneRateNutritionId()
-    nutrition.push({
-        id,
-        name,
-        calories,
-        fat,
-        carbs,
-        protein
-    })
-    localStorage.setItem(STORAGE_KEY, jsonToString(nutrition))
-    return nutrition
-}
+// export function addNutrition({name, calories, fat, carbs, protein}) {
+//     const nutrition = getDataFromLocalStorage()
+//     const id = geneRateNutritionId()
+//     nutrition.push({
+//         id,
+//         name,
+//         calories,
+//         fat,
+//         carbs,
+//         protein
+//     })
+//     localStorage.setItem(STORAGE_KEY, jsonToString(nutrition))
+//     return nutrition
+// }
+
+const food = [{ name: "Banana"}, {name: "Orange"}, { name: "Apple"}, {name:  "Mango"}];
+food.sort((a, b) => a.name - b.name)
+console.log(food);
