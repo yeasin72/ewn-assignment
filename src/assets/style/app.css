@@ -1,7 +1,50 @@
 
 /* === FONTS === */
-
+@font-face {
+    font-family: 'Urbanist', sans-serif;
+    src: url(../fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Sora', sans-serif;
+    src: url(../fonts/Sora/Sora-VariableFont_wght.ttf);
+}
 
 
 
 /* === ROOT === */
+:root{
+    --heading-font: 'Urbanist', sans-serif;
+    --text-font: 'Sora', sans-serif;
+    --brand-color: #3c3ec1;
+    --background-color: #131f30;
+    --border-color: #4a4a4a;
+    --headeing-color: #ebebeb;
+    --text-color: #c0c0c0;
+    --error-color: #d64646;
+    --warning-color: #ebbe7a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--text-font);
+    font-weight: 400;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--heading-font);
+    color: var(--headeing-color);
+}
+
+div{
+    box-sizing: border-box;
+}
+
+input{
+    font-size: 20px;
+}
