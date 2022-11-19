@@ -18,7 +18,8 @@ const CheckboxText = Styled.div`
 
 function ToggleText({children, isClicked = false, onClick}) {
     return (
-        <CheckboxText>
+        <CheckboxText
+            role="toggletext">
             <div 
                 onClick={onClick}>
                     <p>{children}</p>

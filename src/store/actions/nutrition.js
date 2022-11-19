@@ -15,6 +15,8 @@ function getDataFromLocalStorage() {
 
 /**
  * Get Nutrition.
+ * @param {number} start
+ * @param {number} end
  * @returns {object[]} state
  */
 export function geNutritions(start, end) {
@@ -60,7 +62,3 @@ export function deleteNutrition(itemIds) {
 //     localStorage.setItem(STORAGE_KEY, jsonToString(nutrition))
 //     return nutrition
 // }
-
-const food = [{ name: "Banana"}, {name: "Orange"}, { name: "Apple"}, {name:  "Mango"}];
-food.sort((a, b) => a.name - b.name)
-console.log(food);

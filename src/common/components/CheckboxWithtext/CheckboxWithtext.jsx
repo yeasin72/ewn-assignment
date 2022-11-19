@@ -18,7 +18,8 @@ const CheckboxText = Styled.div`
 
 function CheckboxWithtext({children, isClicked = false, selectAll, onClick}) {
     return (
-        <CheckboxText>
+        <CheckboxText
+            role="checkboxwithtext">
             <div>
                 {
                     isClicked
