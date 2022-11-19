@@ -1,4 +1,4 @@
-export const STORAGE_KEY = 'nutritions';
+export const STORAGE_KEY = "nutritions";
 
 /**
  * String to json.

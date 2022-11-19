@@ -1,9 +1,9 @@
-import React from 'react'
-import Styled from 'styled-components'
-import CheckboxWithtext from '../CheckboxWithtext/CheckboxWithtext'
-import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { removeItem, selectItem } from '../../../store/features/selectItems';
+import React from "react"
+import Styled from "styled-components"
+import CheckboxWithtext from "../CheckboxWithtext/CheckboxWithtext"
+import PropTypes from "prop-types";
+import { useDispatch, useSelector } from "react-redux";
+import { removeItem, selectItem } from "../../../store/features/selectItems";
 
 
 
@@ -54,16 +54,17 @@ function SingleNutrition({nutrition}) {
 
 
     return (
-        <SingleNutritionSection>
-            <CheckboxWithtext 
-                isClicked={selected.includes(id)} 
-                selectAll={() => toggleItem(id)}>
-                    {name}
-            </CheckboxWithtext>
-            <div><InnerPstyle>{calories}</InnerPstyle></div>
-            <div><InnerPstyle>{fat}</InnerPstyle></div>
-            <div><InnerPstyle>{carbs}</InnerPstyle></div>
-            <div><InnerPstyle>{protein}</InnerPstyle></div>
+        <SingleNutritionSection
+            role="nutrition">
+                <CheckboxWithtext 
+                    isClicked={selected.includes(id)} 
+                    selectAll={() => toggleItem(id)}>
+                        {name}
+                </CheckboxWithtext>
+                <div><InnerPstyle>{calories}</InnerPstyle></div>
+                <div><InnerPstyle>{fat}</InnerPstyle></div>
+                <div><InnerPstyle>{carbs}</InnerPstyle></div>
+                <div><InnerPstyle>{protein}</InnerPstyle></div>
         </SingleNutritionSection>
     )
 }

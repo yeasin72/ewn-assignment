@@ -1,9 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit"
 const intiState = []
 
 // Nutrition slice
 export const selectedItems = createSlice({
-    name: 'selectedItems',
+    name: "selectedItems",
     initialState: intiState,
     reducers: {
         selectItem: (state, action) => {

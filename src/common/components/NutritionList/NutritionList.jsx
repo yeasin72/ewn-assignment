@@ -1,6 +1,6 @@
-import React from 'react'
-import SingleNutrition from '../SingleNutrition/SingleNutrition'
-import PropTypes from 'prop-types';
+import React from "react"
+import SingleNutrition from "../SingleNutrition/SingleNutrition"
+import PropTypes from "prop-types";
 
 
 function NutritionList({nutritions}) {

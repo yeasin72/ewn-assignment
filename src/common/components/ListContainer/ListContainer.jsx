@@ -1,5 +1,5 @@
-import React from 'react'
-import Styled from 'styled-components'
+import React from "react"
+import Styled from "styled-components"
 
 // container style
 const ListContainerStyle = Styled.div`
@@ -11,7 +11,8 @@ const ListContainerStyle = Styled.div`
 
 export default function ListContainer({children}) {
     return (
-        <ListContainerStyle>
+        <ListContainerStyle
+            role="listcontainer">
             {children}
         </ListContainerStyle>
     )

@@ -1,5 +1,9 @@
-import { jsonToString, STORAGE_KEY, stringToJson } from "../../utils/nutrition";
-import Data from '../data/data.json'
+import { 
+    jsonToString,
+    STORAGE_KEY, 
+    stringToJson 
+} from "../../utils/nutrition.utils";
+import Data from "../data/data.json"
 
 
 /**
@@ -15,6 +19,8 @@ function getDataFromLocalStorage() {
 
 /**
  * Get Nutrition.
+ * @param {number} start
+ * @param {number} end
  * @returns {object[]} state
  */
 export function geNutritions(start, end) {
@@ -60,7 +66,3 @@ export function deleteNutrition(itemIds) {
 //     localStorage.setItem(STORAGE_KEY, jsonToString(nutrition))
 //     return nutrition
 // }
-
-const food = [{ name: "Banana"}, {name: "Orange"}, { name: "Apple"}, {name:  "Mango"}];
-food.sort((a, b) => a.name - b.name)
-console.log(food);

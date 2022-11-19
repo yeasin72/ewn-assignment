@@ -1,8 +1,8 @@
-import React from 'react'
-import Styled from 'styled-components'
+import React from "react"
+import Styled from "styled-components"
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
-import { useDispatch, useSelector } from 'react-redux';
-import { changeLimit, nextOrBackPage } from '../../../store/features/nurtirionManagement';
+import { useDispatch, useSelector } from "react-redux";
+import { changeLimit, nextOrBackPage } from "../../../store/features/nurtirionManagement";
 
 const FooterSection = Styled.div`
     width: 100%;
@@ -59,10 +59,11 @@ export default function ListFooter() {
     }
 
     return (
-        <FooterSection>
+        <FooterSection
+            role="listfooter">
             <div>
                 Row per page 
-                <select 
+                <select
                     onChange={e => changePagePerLimit(e.target.value)}>
                         <option>5</option>
                         <option>10</option>
@@ -72,12 +73,14 @@ export default function ListFooter() {
             </div>
             <div>{range[0]} - {range[1]} of {totalItem}</div>
             <div>
-                <NavigationButtonStyle 
+                <NavigationButtonStyle
+                    role="navButton"
                     isDisable={page <= 1} 
                     onClick={() => changePage("back")}>
                         <BsChevronLeft />
                 </NavigationButtonStyle>
                 <NavigationButtonStyle 
+                    role="navButton"
                     isDisable={page >= maxpage} 
                     onClick={() => changePage("next")}>
                         <BsChevronRight />

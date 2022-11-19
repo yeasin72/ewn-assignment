@@ -1,6 +1,6 @@
-import React from 'react'
-import Styled from 'styled-components'
-import PropTypes from 'prop-types';
+import React from "react"
+import Styled from "styled-components"
+import PropTypes from "prop-types";
 import { BsArrowDownShort, BsArrowUpShort } from "react-icons/bs"
 
 
@@ -18,7 +18,8 @@ const CheckboxText = Styled.div`
 
 function ToggleText({children, isClicked = false, onClick}) {
     return (
-        <CheckboxText>
+        <CheckboxText
+            role="toggletext">
             <div 
                 onClick={onClick}>
                     <p>{children}</p>

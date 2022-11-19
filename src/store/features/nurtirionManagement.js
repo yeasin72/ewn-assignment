@@ -1,5 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { geNutritions, deleteNutrition } from '../actions/nutrition'
+import { createSlice } from "@reduxjs/toolkit"
+import { 
+    geNutritions, 
+    deleteNutrition 
+} from "../actions/nutrition"
 
 /** Init State  */
 const intiState = {
@@ -18,7 +21,7 @@ const intiState = {
 
 // Nutrition slice
 export const nutritionManagement = createSlice({
-    name: 'nutritions',
+    name: "nutritions",
     initialState: intiState,
     reducers: {
         /**
