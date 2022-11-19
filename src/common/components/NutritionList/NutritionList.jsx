@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function NutritionList({nutritions}) {
     return (
         <>
-            {
+            {nutritions &&
                 nutritions.map(nutrition => (
                     <SingleNutrition key={nutrition.id} nutrition={nutrition} />
                 ))

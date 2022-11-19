@@ -75,7 +75,7 @@ export default function ListHeading() {
             role="listheading">
             <CheckboxWithtext
                 onClick={() => sortingAllItems("Name")} 
-                isClicked={selected.length === allnutritions.length && selected.length > 0} 
+                isClicked={allnutritions && selected.length === allnutritions.length && selected.length > 0} 
                 selectAll={selectAllItems}>
                     Dessert
             </CheckboxWithtext>
