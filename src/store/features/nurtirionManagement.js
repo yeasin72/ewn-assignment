@@ -6,12 +6,12 @@ import {
 
 /** Init State  */
 const intiState = {
-    allnutritions: [],
+    allnutritions: [{id: '54d6s', name: "Banana", calories: 237, fat: 9, carbs: 37, protein: 4 }],
     limit: 5,
     page: 1,
-    maxpage: 0,
-    totalItem: 0,
-    range: [0, 0],
+    maxpage: 1,
+    totalItem: 1,
+    range: [0, 1],
     sortByname: false,
     sortByCal: false,
     sortByFat: false,
