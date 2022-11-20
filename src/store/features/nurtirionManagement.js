@@ -53,7 +53,7 @@ export const nutritionManagement = createSlice({
          */
         changeLimit: (state, action) => {
             const { length , element }  = geNutritions(0, action.payload)
-            return {...state, limit: action.payload, allnutritions: element, range: [1, action.payload > length ? length : action.payload], maxpage: Math.ceil(length / action.payload)}
+            return {...state, limit: action.payload, allnutritions: element, page: 1, range: [1, action.payload > length ? length : action.payload], maxpage: Math.ceil(length / action.payload)}
         },
         /**
          * Change Page.
