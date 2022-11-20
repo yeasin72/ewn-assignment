@@ -3,8 +3,7 @@ import {
     render as rtlRender, 
     screen, 
     cleanup, 
-    fireEvent, 
-    getAllByRole
+    fireEvent
 } from "@testing-library/react"
 import Store from "../../store/store"
 import { Provider } from "react-redux"
@@ -41,8 +40,8 @@ describe("Nutrition page test", () => {
     it("Checkbox With text Component in the document", () => {
         componentRender(<NutritionComponent />)
         // element in the document
-        const element = screen.getByRole("checkboxwithtext")
-        expect(element).toBeInTheDocument()
+        const elements = screen.getAllByRole("checkboxwithtext")
+        expect(elements.length).toBe(2)
         fireEvent.click(screen.getByText("Dessert"))
     })
 
@@ -54,6 +53,14 @@ describe("Nutrition page test", () => {
         const element = screen.getByRole("listfooter")
         expect(element).toBeInTheDocument()
         expect(screen.getByText("Row per page")).toBeInTheDocument()
+    })
+    
+    /** Single Nutrition present in the document */
+    it("Single Nutrition in the document", () => {
+        componentRender(<NutritionComponent />)
+        // element in the document
+        const elements = screen.getAllByRole("nutrition")
+        expect(elements.length).toBe(1)
     })
 
     /** Style test */
